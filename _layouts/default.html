@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en-US' }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% assign page_title = page.title | default: site.title %}
+    <title>{{ page_title }}{% unless page_title == site.title %} · {{ site.title }}{% endunless %}</title>
+    <meta name="description" content="{{ page.description | default: site.description | escape }}">
+    <meta name="theme-color" content="#11131a" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#f4f3ee" media="(prefers-color-scheme: light)">
+    <meta property="og:title" content="{{ page_title | escape }}">
+    <meta property="og:description" content="{{ page.description | default: site.description | escape }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/project-house.css' | relative_url }}">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+      <a class="site-brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} home">
+        <span class="site-brand__mark" aria-hidden="true">D<span>/</span>N</span>
+        <span class="site-brand__label">{{ site.project_label | default: 'Don Noel / Projects' }}</span>
+      </a>
+      <nav class="site-nav" aria-label="Project navigation">
+        <span class="site-nav__title">{{ site.title }}</span>
+        <a href="{{ site.github_url | default: site.github.repository_url }}">GitHub <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+
+    <main id="main-content" class="site-main">
+      {{ content }}
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <span class="site-brand__mark site-brand__mark--small" aria-hidden="true">D<span>/</span>N</span>
+        <p><strong>{{ site.title }}</strong><br>{{ site.tagline }}</p>
+      </div>
+      <p>Designed for clarity.<br>Built in the open.</p>
+    </footer>
+  </body>
+</html>
