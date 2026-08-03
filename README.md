@@ -28,6 +28,9 @@ baseurl: /ProjectName
 lang: en-US
 ```
 
+Set `hide_github_link: true` when a project site should omit the repository link
+from the shared header. The link remains visible by default for existing sites.
+
 Project content should use `layout: default`. Keep project-specific content in the consuming repository.
 
 ## Release process

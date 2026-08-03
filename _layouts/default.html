@@ -25,7 +25,9 @@
       </a>
       <nav class="site-nav" aria-label="Project navigation">
         <span class="site-nav__title">{{ site.title }}</span>
-        <a href="{{ site.github_url | default: site.github.repository_url }}">GitHub <span aria-hidden="true">↗</span></a>
+        {% unless site.hide_github_link %}
+          <a href="{{ site.github_url | default: site.github.repository_url }}">GitHub <span aria-hidden="true">↗</span></a>
+        {% endunless %}
       </nav>
     </header>
 
