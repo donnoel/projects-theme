@@ -9,7 +9,7 @@ The theme provides the common project masthead, footer, typography, color system
 Add the versioned remote theme to the consuming repository's `_config.yml`:
 
 ```yaml
-remote_theme: donnoel/projects-theme@v1.0.1
+remote_theme: donnoel/projects-theme@v1.0.2
 
 plugins:
   - jekyll-remote-theme
