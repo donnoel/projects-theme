@@ -118,17 +118,20 @@ a:focus-visible {
 }
 
 .site-brand__mark {
-  display: inline-grid;
-  place-items: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 42px;
   height: 42px;
   color: var(--button-ink);
   background: var(--accent-strong);
   border-radius: 13px;
   font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
-  font-size: 0.7rem;
+  font-size: 0.78rem;
   font-weight: 800;
-  letter-spacing: -0.08em;
+  letter-spacing: 0;
+  line-height: 1;
+  white-space: nowrap;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.15);
 }
 
@@ -638,7 +641,7 @@ a:focus-visible {
   width: 34px;
   height: 34px;
   border-radius: 10px;
-  font-size: 0.58rem;
+  font-size: 0.64rem;
 }
 
 @media (max-width: 900px) {
