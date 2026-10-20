@@ -9,7 +9,7 @@
 
 ---
 
-## ✨ Overview
+## 🧭 Overview
 
 The shared Jekyll remote theme for Don Noel project websites hosted on GitHub Pages.
 
